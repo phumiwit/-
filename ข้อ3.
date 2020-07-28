@@ -1,0 +1,104 @@
+# -
+ข้อ 3.
+#include <iostream>
+#include <windows.h>
+using namespace std;
+int main()
+{
+    HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+   int a;
+   char ans;
+ do
+ {
+ 	cout << "choose traffic light" << endl;
+ 	cout << "0) turn off all light" << endl;
+ 	cout << "1) Red light" << endl;
+ 	cout << "2) Green light" << endl;
+ 	cout << "3) Yellow light" << endl;
+ 	cout << "4) Exit" << endl;
+ 	cin >> a;
+ 	
+ 	if(a==0)
+	 {
+	 	cout << "ooooooo" <<endl;
+	 	cout << "ooooooo" <<endl;
+	 	cout << "ooooooo" <<endl;
+	 	cout << "ooooooo" <<endl;
+	 	cout << endl;
+	 	cout << "again? Y/N" << endl;
+	    cin >> ans;
+	 	
+	 }
+	   
+	 if(a==1)
+	 {
+	    cout << "oo";
+	 	SetConsoleTextAttribute(hStdOut, 4);
+	 	cout <<"ooo";
+	 	SetConsoleTextAttribute(hStdOut, 15);
+	 	cout <<"oo" <<endl;
+	 	SetConsoleTextAttribute(hStdOut, 4);
+	 	cout <<"ooooooo" <<endl;
+	 	cout <<"ooooooo" <<endl;
+	 	SetConsoleTextAttribute(hStdOut, 15);
+	 	cout << "oo";
+	 	SetConsoleTextAttribute(hStdOut, 4);
+	 	cout <<"ooo";
+	 	SetConsoleTextAttribute(hStdOut, 15);
+	 	cout <<"oo" <<endl;
+	 	cout << endl;
+	 	cout << "again? Y/N" << endl;
+	    cin >> ans;
+	  
+	 }
+	   
+	 if(a==2)
+	 {
+	 	 cout << "oo";
+	 	SetConsoleTextAttribute(hStdOut, 2);
+	 	cout <<"ooo";
+	 	SetConsoleTextAttribute(hStdOut, 15);
+	 	cout <<"oo" <<endl;
+	 	SetConsoleTextAttribute(hStdOut, 2);
+	 	cout <<"ooooooo" <<endl;
+	 	cout <<"ooooooo" <<endl;
+	 	SetConsoleTextAttribute(hStdOut, 15);
+	 	cout << "oo";
+	 	SetConsoleTextAttribute(hStdOut, 2);
+	 	cout <<"ooo";
+	 	SetConsoleTextAttribute(hStdOut, 15);
+	 	cout <<"oo" <<endl;
+	 	cout << endl;
+	 	cout << "again? Y/N" << endl;
+	    cin >> ans;
+	 }
+	   
+	 if(a==3)
+	 {
+	 	cout << "oo";
+	 	SetConsoleTextAttribute(hStdOut, 14);
+	 	cout <<"ooo";
+	 	SetConsoleTextAttribute(hStdOut, 15);
+	 	cout <<"oo" <<endl;
+	 	SetConsoleTextAttribute(hStdOut, 14);
+	 	cout <<"ooooooo" <<endl;
+	 	cout <<"ooooooo" <<endl;
+	 	SetConsoleTextAttribute(hStdOut, 15);
+	 	cout << "oo";
+	 	SetConsoleTextAttribute(hStdOut, 14);
+	 	cout <<"ooo";
+	 	SetConsoleTextAttribute(hStdOut, 15);
+	 	cout <<"oo" <<endl;
+	 	cout << endl;
+	 	cout << "again? Y/N" << endl;
+	    cin >> ans;
+	 }if(a==4)
+	 {
+	 	  
+          return 0;
+
+	 }
+
+ }
+ while(ans !='N');
+}
