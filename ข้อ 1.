@@ -1,0 +1,247 @@
+# -
+ข้อ 1.
+#include <iostream>
+#include <windows.h>
+using namespace std;
+int main()
+ {
+ 	HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+ 	char ans;
+ 	int age;
+	char a;
+	int Numberpeople=0;
+	int Numbermalekid15=0;
+	int Numberfemalekid15=0;
+	int Numbermaleadult16=0;
+	int Numberfemaleadult16=0;
+	int Numbermaleadult26 =0;
+	int Numberfemaleadult26=0;
+	int Numbermaleadult37=0;
+	int Numberfemaleadult37=0;
+	int male15=0;
+	int female15=0;
+	int male16=0;
+	int female16=0;
+	int male26=0;
+	int female26=0;
+	int male37=0;
+	int female37=0;
+	int male=0;
+	int female=0;
+	do
+	{
+	
+	    cout << "welcome to hotel" << endl;
+	    cout << "plese input age"  << endl;
+	 	cin >> age;
+	 	cout << "plese input sex M or F"  << endl;
+	 	cin >> a;
+	 	if(a == 'M')
+	{
+		 if(age > 36)
+		 {
+		 	Numberpeople = Numberpeople +1;
+		 	Numbermaleadult37 = Numbermaleadult37 +1;
+		 	male = male+1;
+		 	male37 = male37 +1;
+		 }
+		 if(age <= 15)
+		 {
+		 	Numberpeople = Numberpeople +1;
+		 	Numbermalekid15 = Numbermalekid15 +1;
+		 	male = male+1;
+		 	male15 = male15+1;
+		 }
+		 	if(age >= 16 && age <=25)
+	    
+		 {
+		 	Numberpeople = Numberpeople +1;
+		 	Numbermaleadult16 = Numbermaleadult16 +1;
+		 	male =male+1;
+		 	male16 = male16+1;
+		 }
+		
+		  if(age >= 26 && age <= 35)
+		 {
+		 	Numberpeople = Numberpeople +1;
+		 	Numbermaleadult26 = Numbermaleadult26 +1;
+		 	male = male+1;
+		 	male26 = male26+1;
+		 }
+	}
+	    
+	
+	    if(a == 'F')
+	{
+		
+		 if(age > 36)
+		 {
+		 	Numberpeople = Numberpeople +1;
+		 	Numberfemaleadult37 = Numberfemaleadult37 +1;
+		 	female = female +1;
+		 	female37 = female37+1;
+		 }
+		 if(age <= 15 )
+		 {
+		 	Numberpeople = Numberpeople +1;
+		 	Numberfemalekid15 = Numberfemalekid15 +1;
+		 	female = female+1;
+		 	female15 = female15+1;
+		 }
+		 
+		 if(age >= 16 && age <=25)
+		 {
+		 	Numberpeople = Numberpeople +1;
+		 	Numberfemaleadult16 = Numberfemaleadult16 +1;
+		 	female = female+1;
+		 	female16=female16+1;
+		 }
+		
+		 if(age >= 26 && age <=35)
+		 {
+		 	Numberpeople = Numberpeople +1;
+		 	Numberfemaleadult26 = Numberfemaleadult26 +1;
+		 	female = female+1;
+		 	female26 = female26+1;
+		 }
+	}
+	 
+    cout << "again? Y/N" << endl;
+	cin >> ans;
+  }
+     while(ans =='Y');
+     
+	cout << "Summary Report" << endl;
+	 cout << "Total[" << Numberpeople << "]Person" <<endl;
+	 cout << "Male" << endl;
+	 
+	 
+	 for(int i=0;i<male;i++)
+	   {
+	   	
+	 SetConsoleTextAttribute(hStdOut, 1);
+	 cout << "|" << " ";
+       }
+     SetConsoleTextAttribute(hStdOut, 15);
+	 cout <<"[" << male << "]" << endl;
+     
+     
+	 
+	 for(int j=0;j<female;j++)
+	   {
+	 SetConsoleTextAttribute(hStdOut, 12);
+	 cout << "|" << " ";
+       }
+     SetConsoleTextAttribute(hStdOut, 15);
+     cout <<"female" << endl;
+	 cout <<"[" << female << "]" << endl;
+     
+
+	 cout << "Age Report" << endl;
+	 
+	
+	    cout << "0-15 Total[" << male15+female15 << "]Person" << endl;
+	    cout << "Male" << endl;
+	    
+		
+		for(int k=0;k<male15;k++)
+		{
+			SetConsoleTextAttribute(hStdOut, 1);
+			cout << "|" << " ";
+		}
+		   SetConsoleTextAttribute(hStdOut, 15);
+		cout <<"[" << male15 << "]" << endl;
+		cout << "female" << endl;
+	
+	    
+		
+	    for(int n=0;n<female15;n++)
+		{
+			SetConsoleTextAttribute(hStdOut, 12);
+			cout << "|" << " ";
+		}
+		  SetConsoleTextAttribute(hStdOut, 15);
+		cout <<"[" << female15 << "]" << endl;
+	    
+	 
+	
+	    cout << "16-25 Total[" << male16+female16 << "]Person" << endl;
+	    cout << "Male" << endl;
+	    
+		
+		for(int m=0;m<male16;m++)
+		{
+			SetConsoleTextAttribute(hStdOut, 1);
+			cout << "|" << " ";
+		}
+		   SetConsoleTextAttribute(hStdOut, 15);
+		cout <<"[" << male16 << "]" << endl;
+		cout << "female" << endl;
+	    
+	
+		
+		 for(int o=0;o<female16;o++)
+		{
+			SetConsoleTextAttribute(hStdOut, 12);
+			cout << "|" << " ";
+		}
+		    SetConsoleTextAttribute(hStdOut, 15);
+		cout <<"[" << female16 << "]" << endl;
+	   
+	 
+	 
+	    cout << "26-35 Total[" << male26+female26 << "]Person" << endl;
+	    cout << "Male " << endl;
+	    
+		
+		for(int p=0;p<male26;p++)
+		{
+			SetConsoleTextAttribute(hStdOut, 1);
+			cout << "|" << " ";
+		}
+		    SetConsoleTextAttribute(hStdOut, 15);
+		cout <<"[" << male26 << "]" << endl;
+		cout << "female" << endl;
+	   
+	    
+		
+		 for(int q=0;q<female26;q++)
+		{
+			SetConsoleTextAttribute(hStdOut, 12);
+			cout << "|" << " ";
+		}
+		    SetConsoleTextAttribute(hStdOut, 15);
+		cout <<"[" << female26 << "]" << endl;
+	    
+	 
+	    cout << "> 36 Total[" << male37+female37 << "]Person" << endl;
+	    cout << "Male" << endl;
+	    
+		
+		for(int r=0;r<male37;r++)
+		{
+			SetConsoleTextAttribute(hStdOut, 1);
+			cout << "|" << " ";
+		}
+		SetConsoleTextAttribute(hStdOut, 15);
+		cout <<"[" << male37 << "]" << endl;
+		cout << "female" << endl;
+	   
+	    
+		
+		for(int h=0;h<female37;h++)
+		{
+			SetConsoleTextAttribute(hStdOut, 12);
+			cout << "|" << " ";
+		}
+		SetConsoleTextAttribute(hStdOut, 15);
+		cout <<"[" << female37 << "]" << endl;
+	   
+}
+		 
+	 
+	
+
+
+	
+ 
