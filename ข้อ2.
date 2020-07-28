@@ -1,0 +1,99 @@
+# -
+ข้อ 2.
+#include <iostream>
+using namespace std;
+int main()
+{
+	int n;
+	
+	int F;
+	float K;
+	float C;
+	float Q;
+    float sum1=0;
+    float sum2=0;
+    float sum3=0;
+	float count1=0;
+	float count2=0;
+	float count3=0;
+	
+	char a;
+	char b;
+	do
+	{
+	cout << "chosse menu" << endl;
+	cout << "1) input temperature" << endl;
+	cout << "2) Report" << endl;
+	cout << "3) End program" << endl;
+	cin >> n;
+	if(n==1)
+	 {  do
+	    {
+	    
+	    cout <<" mechine1 Fahrenheit"  << endl;
+		cout << "input temperater1" << endl;
+		cin >> F;
+	    count1++;
+	    sum1 = sum1+F;
+	    cout << "input again? Y/N" << endl;
+		cin >> a;
+		}
+		while(a=='Y');
+		do
+		{
+		
+		cout <<" mechine2 kelvin" << endl;
+		cout << "input temperature2" << endl;
+		cin >> K;
+		count2++;
+		
+		sum2=sum2+K;
+		cout << "input again? Y/N" << endl;
+		cin >> a;
+		
+	    }
+	    while(a=='Y');
+	    do
+	    {
+	    
+		cout << "mechine3 Celsius" <<endl;
+		cout << "input temperature3" << endl;
+		cin >> C;
+		count3++;
+		
+		sum3 = sum3+C;
+		cout << "input again? Y/N" << endl;
+		cin >> a;
+		}
+		while(a=='Y');
+    }
+    if(n==2)
+	{ 
+	   do
+	   {
+	    cout << "chosse Average of mechine" << endl;
+		cout << "1) mechine 1" << endl;
+		cout << "2) mechine 2" << endl;
+		cout << "3) mechine 3" << endl;
+		cin >> Q;
+	 if(Q==1)
+	 {
+	 	sum1=(sum1-32)/1.8 << endl;
+	 	cout << sum1/count1;
+	 }
+	 if(Q==2)
+	 {
+	 	sum2 = sum2-273.15 << endl;
+	 	cout << sum2/count2;
+	 }
+	 if(Q==3)
+	 {
+	 	cout << sum3/count3 << endl;
+	 }
+	   cout << "again? Y/N" << endl;
+	   cin >> b;
+       }
+	 while(b!='N');			
+	}
+}while(n !=3);
+}
